@@ -18,7 +18,8 @@ The project aims to leverage machine learning and deep learning techniques to an
 - [Dataset Description](#dataset-description)
 - [Exploratory Data Analysis](#exploratory-data-analysis)
 - [Data Preprocessing](#data-preprocessing)
-- [License](#license)
+- [Modelling](#modelling)
+- [Results](#results)
 
 
 # What is Exoplanet?
@@ -138,3 +139,5 @@ The given CNN (Convolutional Neural Network) model is designed for a binary clas
 
 
 To summarize, this model applies a series of convolutional, pooling, normalization, dropout, and dense layers to process the input data and extract relevant features. The flattened output is then fed into a sequence of dense layers, progressively reducing the dimensionality and introducing non-linearities. The final layer produces a binary classification prediction using the sigmoid activation function.
+
+# Results

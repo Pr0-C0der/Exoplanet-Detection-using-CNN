@@ -13,10 +13,11 @@ The project aims to leverage machine learning and deep learning techniques to an
 ## Table of Contents
 
 - [What is Exoplanet](#what-is-exoplanet)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Model](#model)
-- [Contributing](#contributing)
+- [Methods for Detecting Exoplanets](#methods-for-detecting-exoplanets)
+- [Transit Method used for Exoplanet Detection](#transit-method-used-for-exoplanet-detection)
+- [Dataset Description](#dataset-description)
+- [Exploratory Data Analysis](#exploratory-data-analysis)
+- [Data Preprocessing](#data-preprocessing)
 - [License](#license)
 
 
@@ -75,4 +76,65 @@ In the data pre-processing phase, several steps are taken to prepare the dataset
 
 The decision to not perform data scaling was taken while testing the models trained using scaled data. From the observations we found out that using the raw data produced better results compared to scaled data.
 
+# Modelling 
+In this project, we explore various Machine Learning models to to accurately predict the presence or absence of exoplanets based on the flux variations of stars. The Machine Learning models are tuned using GridSearch Method. Additionally, we propose a Convolutional Neural Network (CNN) model to accurately predict the same. The CNN model is implemented using TensorFlow and Keras, taking advantage of their deep learning capabilities.
 
+The CNN architecture consists of multiple convolutional layers, batch normalization, max pooling, dropout regularization, and dense layers. The model is trained using the training set and evaluated on the test set to assess its performance in detecting exoplanets.
+
+The CNN Architecture is as follows:
+
+![CNN Architecture](https://github.com/Pr0-C0der/Exoplanet-Detection-using-CNN/assets/93116210/371ac116-555f-4b85-ae70-0c5b806b6dd6)
+
+The given CNN (Convolutional Neural Network) model is designed for a binary classification task. Let's break down each component and understand the model's architecture:
+
+1. Sequential Model:
+   - The model is defined using the `keras.Sequential()` class, which allows stacking multiple layers sequentially.
+
+2. Reshape Layer:
+   - The first layer reshapes the input data into a tensor with dimensions (3197, 1).
+   - The input shape is specified as (3197,) to indicate a 1D input of length 3197.
+
+3. Normalization Layer:
+   - The normalization layer applies feature-wise normalization to the input data, bringing the mean to 0 and standard deviation to 1.
+
+4. Conv1D Layer (First):
+   - This layer performs a 1D convolution operation on the input data.
+   - It has 11 filters, each of size 2, which means it applies 11 different convolutional filters of size 2 to the input.
+   - The activation function used is ReLU (Rectified Linear Unit), which introduces non-linearity to the output.
+   - The kernel_regularizer parameter is set to 'l2', indicating that L2 regularization is applied to the kernel weights of this layer.
+
+5. Batch Normalization Layer (First):
+   - Batch normalization is applied after the first convolutional layer to normalize the outputs and improve the stability and performance of the model.
+
+6. Conv1D Layer (Second):
+   - This layer is similar to the previous convolutional layer but has 7 filters instead of 11.
+   - Again, ReLU activation and L2 regularization are applied.
+
+7. Batch Normalization Layer (Second):
+   - Batch normalization is applied after the second convolutional layer, following the same rationale as before.
+
+8. MaxPooling1D Layer:
+   - This layer performs max pooling operation with a pool size of 2 and stride of 2.
+   - Max pooling reduces the spatial dimensions of the input, retaining the maximum value within each pool.
+   - This downsampling operation helps in capturing the most important features while reducing computational complexity.
+
+9. Dropout Layer:
+   - Dropout is a regularization technique used to prevent overfitting.
+   - This layer randomly sets a fraction (0.4) of the input units to 0 at each update during training, which helps in reducing over-reliance on any particular feature.
+
+10. Flatten Layer:
+    - The flatten layer flattens the tensor from the previous layer into a 1D vector.
+    - This prepares the data for the subsequent fully connected layers.
+
+11. Dense Layers:
+    - Three dense (fully connected) layers follow the flatten layer.
+    - The first dense layer has 50 units and uses the ReLU activation function.
+    - The second and third dense layers have 30 and 12 units, respectively, both using the ReLU activation function.
+
+12. Output Layer:
+    - The final dense layer has 1 unit, representing the output of the model.
+    - The activation function used is sigmoid, which squashes the output between 0 and 1, making it suitable for binary classification problems.
+    - The model predicts the probability of the positive class based on the input.
+
+
+To summarize, this model applies a series of convolutional, pooling, normalization, dropout, and dense layers to process the input data and extract relevant features. The flattened output is then fed into a sequence of dense layers, progressively reducing the dimensionality and introducing non-linearities. The final layer produces a binary classification prediction using the sigmoid activation function.

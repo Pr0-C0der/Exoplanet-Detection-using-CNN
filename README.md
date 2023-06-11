@@ -15,6 +15,7 @@ The project aims to leverage machine learning and deep learning techniques to an
 - [What is Exoplanet](#what-is-exoplanet)
 - [Methods for Detecting Exoplanets](#methods-for-detecting-exoplanets)
 - [Transit Method used for Exoplanet Detection](#transit-method-used-for-exoplanet-detection)
+- [Literature Review](#literature-review)
 - [Dataset Description](#dataset-description)
 - [Exploratory Data Analysis](#exploratory-data-analysis)
 - [Data Preprocessing](#data-preprocessing)
@@ -44,8 +45,25 @@ An exoplanet, or extrasolar planet, is a planet that orbits a star outside of ou
 
 Flux is a crucial parameter used in the detection and characterization of exoplanets. Flux is a measure of the number of electric or magnetic field lines passing through a surface in a given amount time. By monitoring the flux, which represents the light intensity emitted by a star, astronomers can identify subtle changes that indicate the presence of an exoplanet. The transit method relies on observing periodic dips in flux as an exoplanet passes in front of its host star, causing a temporary decrease in the observed light. Additionally, the radial velocity method measures the small shifts in spectral lines caused by the gravitational tug of an exoplanet, resulting in periodic variations in flux. Analyzing these flux variations provides valuable information about the presence, size, and orbital characteristics of exoplanets.
 
-# Literature Review:
+# Literature Review
 In this section, we provide a brief review of the existing literature on exoplanet detection and related studies. The following key research papers and resources have been referenced to gain insights into the field:
+1. **Priyadarshini, Ishaani & Puri, Vikram. (2021). A convolutional neural network (CNN) based ensemble model for exoplanet detection. Earth Science Informatics. 14. 1-13. 10.1007/s12145-021-00579-5**:
+  - Using the same dataset used in our project, this study proposes Ensemble-CNN model with an accuracy of 99.62%. The performance of the models has been evaluated using parameters like Accuracy, Precision, Sensitivity, and Specificity. It uses Stacking method to build the final model. Stacking enables us to train multiple models to solve similar problems, and based on their combined output, it builds a new model with improved performance. 
+
+2. **Jin, Yucheng & Yang, Lanyi & Chiang, Chia-En. (2022). Identifying Exoplanets with Machine Learning Methods: A Preliminary Study.**:
+  - In this study, machine learning methods were employed to identify exoplanets using the Kepler dataset. The researchers achieved high accuracies ranging from 88.50% to 99.79% in supervised learning tasks, where various algorithms were applied. Additionally, unsupervised learning using k-means clustering successfully formed distinct clusters for confirmed exoplanets.
+
+3. **Mena, Francisco & Bugueño, Margarita & Araya, Mauricio. (2019). Classical Machine Learning Techniques in the Search of Extrasolar Planets. CLEI Electronic Journal. 22. 10.19153/cleiej.22.3.3.** :
+  - This study explores automated methods for detecting transit planets in astronomical data. By leveraging supervised learning and advanced pattern recognition techniques, the study predicts and classifies unclassified light curves. The approach improves efficiency in transit planet detection, reducing the need for manual analysis by experts.
+
+4. **Malik, Abhishek & Moster, Ben & Obermeier, Christian. (2020). Exoplanet Detection using Machine Learning.** :
+  - This study presents a machine learning-based technique for exoplanet detection using the transit method. The proposed method achieves comparable results to state-of-the-art models while being computationally efficient. On Kepler data, it achieves an AUC of 0.948 and a Recall of 0.96. For TESS data, it demonstrates an accuracy of 98% and a Recall of 0.82, addressing challenges with shorter light curves. This method provides a reliable classification system for the increasing number of light curves received from TESS.
+
+5. **Tiensuu, J., Linderholm, M., Dreborg, S., & Örn, F. (2019). Detecting exoplanets with machine learning : A comparative study between convolutional neural networks and support vector machines (Dissertation).** :
+  - This project compares Support Vector Machine (SVM) and Convolutional Neural Networks (CNN) for classifying light intensity time series data of extrasolar stars. The imbalanced dataset is addressed through data augmentation. Preprocessing techniques such as feature extraction, Fourier transform, detrending, and smoothing are applied. Proposed CNN model achieves a recall of 1.000 and a precision of 0.769, outperforming SVM with a recall of 0.800 and a precision of 0.571.
+
+6. **Singh, S. P., & Misra, D. K. (2020). Exoplanet Hunting in Deep Space with Machine Learning. International Journal of Research in Engineering, Science and Management, 3(9), 187–192.** :
+  - This project uses machine learning on NASA's Kepler data to predict exoplanet habitability. Comparative analysis of algorithm performance is conducted to identify suitable models. The approach accelerates exoplanet detection, enhancing our understanding of habitability and exoplanet diversity. The proposed model can be optimized with new data from space telescopes and classifies exoplanet candidates as habitable or non-habitable from various observatories.
 
 
 # Dataset Description

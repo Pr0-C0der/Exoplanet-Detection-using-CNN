@@ -44,6 +44,10 @@ An exoplanet, or extrasolar planet, is a planet that orbits a star outside of ou
 
 Flux is a crucial parameter used in the detection and characterization of exoplanets. Flux is a measure of the number of electric or magnetic field lines passing through a surface in a given amount time. By monitoring the flux, which represents the light intensity emitted by a star, astronomers can identify subtle changes that indicate the presence of an exoplanet. The transit method relies on observing periodic dips in flux as an exoplanet passes in front of its host star, causing a temporary decrease in the observed light. Additionally, the radial velocity method measures the small shifts in spectral lines caused by the gravitational tug of an exoplanet, resulting in periodic variations in flux. Analyzing these flux variations provides valuable information about the presence, size, and orbital characteristics of exoplanets.
 
+# Literature Review:
+In this section, we provide a brief review of the existing literature on exoplanet detection and related studies. The following key research papers and resources have been referenced to gain insights into the field:
+
+
 # Dataset Description
 The dataset for the following project was collected by the NASA Kepler space telescope using the Transit method. By closely observing a star over extended periods, ranging from months to years, scientists can detect regular variations in the light intensity. These variations, known as "dimming," serve as evidence of the presence of an orbiting body around the star. Such stars exhibiting dimming can be considered potential exoplanet candidates. However, further study and investigation are required to confirm the existence of exoplanets. For example, employing satellites that capture light at different wavelengths can provide additional data to solidify the belief that a candidate system indeed harbors exoplanets.
 
@@ -55,6 +59,9 @@ The dataset provided is divided into Training and Testing data. The data describ
 - Testset:
   - 570 rows or observations.
   - 5 confirmed exoplanet-stars and 565 non-exoplanet-stars.
+
+## Performance Metric:
+Recall and precision are used as performance metrics for the above dataset in the context of exoplanet detection due to the nature of the problem and the importance of correctly identifying exoplanets. High recall ensures that we capture as many true exoplanets as possible, while high precision minimizes the number of false positives, reducing the resources required for further validation and confirmation processes. Balancing these metrics is crucial to achieving accurate and reliable exoplanet detection. Balancing these metrics is crucial to achieving accurate and reliable exoplanet detection.
 
 # Exploratory Data Analysis
 
@@ -71,7 +78,7 @@ By observing the below distribution, we can conclude the same. Since the dataset
 
 # Data Preprocessing
 In the data pre-processing phase, several steps are taken to prepare the dataset for the exoplanet detection project. 
-1. Firstly, to address the issue of data imbalance, outliers are removed from the dataset. As the data contains a high imbalance between the number of exoplanet and non-exoplanet instances, this step helps in creating a more balanced representation of the classes. 
+1. Firstly, to address the issue of data imbalance, outliers are removed from the dataset. As the data contains a high imbalance between the number of exoplanet and non-exoplanet instances, this step helps in creating a more balanced representation of the classes. The outlier removing technique is taken from [here](https://www.kaggle.com/code/antonzv/exoplanet-hunting-top-score-using-smote-and-cnn).
 2. Secondly, to further handle the data imbalance, a technique called Random Over Sampler is employed, which increases the number of minority class instances through random duplication. This helps in improving the learning process and the performance of the models. 
 3. Lastly, the labels in the dataset are transformed from 1 and 2 to 0 and 1, respectively, to ensure a consistent binary representation. 
 
@@ -138,6 +145,24 @@ The given CNN (Convolutional Neural Network) model is designed for a binary clas
     - The model predicts the probability of the positive class based on the input.
 
 
-To summarize, this model applies a series of convolutional, pooling, normalization, dropout, and dense layers to process the input data and extract relevant features. The flattened output is then fed into a sequence of dense layers, progressively reducing the dimensionality and introducing non-linearities. The final layer produces a binary classification prediction using the sigmoid activation function.
+To summarize, this model applies a series of convolutional, pooling, normalization, dropout, and dense layers to process the input data and extract relevant features. The flattened output is then fed into a sequence of dense layers, progressively reducing the dimensionality and introducing non-linearities. The final layer produces a binary classification prediction using the sigmoid activation function. We use `Adam` optimizer for optimization purposes.
+
+
+Additionally, we use EarlyStopping to stop training the model when it reaches a point of no further improvement and ExponentialDecay to improve deep learning model training even more. 
+
+The hyperparameters, including the learning rate, required to train the model can be found inside the Exoplanet_Detection notebook within the repository.
 
 # Results
+The results of the project are as follows:
+
+1. The Proposed CNN Model:
+
+   - The proposed CNN model showed an exceptional performance, with 100% precision and recall on the test set after multiple iterations and fine-tuning. Although such high accuracy is uncommon in real-world scenarios, it demonstrates the model's ability to effectively learn and capture the underlying patterns in exoplanet detection. The best-performing model has been saved and can be accessed in the GitHub repository.
+   
+2. Machine Learning Models:
+
+   - Traditional machine learning models did not perform as well as the CNN model in the exoplanet detection task. These models may have struggled to capture the complex relationships and patterns present in the dataset, resulting in low performance compared to the CNN model. However, they still provide valuable insights and serve as benchmarks for performance evaluation.
+
+3. Best Performing Machine Learning Model - KNN:
+
+   - Among the machine learning models explored, the K-nearest neighbors (KNN) algorithm exhibited the highest performance. While not as accurate as the CNN model, KNN demonstrated relatively better results compared to other traditional models. By finding the nearest neighbors based on training examples, KNN makes predictions based on their labels. The promising performance of KNN suggests its potential for exoplanet detection tasks, and further refinement and exploration could lead to improved performance. 

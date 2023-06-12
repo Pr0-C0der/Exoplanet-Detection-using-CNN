@@ -26,6 +26,7 @@ The project aims to leverage machine learning and deep learning techniques to an
 
 # What is Exoplanet?
 ![Exoplanets](https://exoplanets.nasa.gov/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBaWtPIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a88308edf835b0b6d9d4399ffa1483554e9c3f64/Exoplanet_types_graphic.jpg?disposition=attachment)
+
 [Image Source](https://exoplanets.nasa.gov/resources/2253/exoplanet-types-graphic/)
 
 An exoplanet, or extrasolar planet, is a planet that orbits a star outside of our solar system. These celestial bodies are of great scientific interest as they provide valuable insights into the formation, composition, and diversity of planetary systems beyond our own. Exoplanets can vary in size, composition, and orbital characteristics, ranging from gas giants to rocky planets. Their detection is achieved through various indirect methods, such as observing the transit of a planet in front of its host star or measuring the gravitational influence on the star. The study of exoplanets plays a crucial role in advancing our understanding of planetary systems and the potential for extraterrestrial life.

@@ -181,27 +181,27 @@ The results of the project are as follows:
 
    - Traditional machine learning models did not perform as well as the CNN model in the exoplanet detection task. These models may have struggled to capture the complex relationships and patterns present in the dataset, resulting in low performance compared to the CNN model. However, they still provide valuable insights and serve as benchmarks for performance evaluation.
 
-The Classifiers are:
-- **LightGBM**
-  - The fine-tuned model used:
-    - ![LGBM Model](https://github.com/Pr0-C0der/Exoplanet-Detection-using-CNN/assets/93116210/60561bd0-29e9-45c5-8ba9-c3b24c7727ed)
- 
-  -  Classification Report:
-      - ![LGBM Classification Report](https://github.com/Pr0-C0der/Exoplanet-Detection-using-CNN/assets/93116210/6e4f4b7c-8f13-4f00-943b-117bc81077ba)
- 
-- **Random Forest**
-  - The fine-tuned model used:
-    - ![RF](https://github.com/Pr0-C0der/Exoplanet-Detection-using-CNN/assets/93116210/9f71df7d-14c9-40bb-87af-d3de734116d1)
+  - The Classifiers used are :
+  - **LightGBM**
+    - The fine-tuned model used:
+      - ![LGBM Model](https://github.com/Pr0-C0der/Exoplanet-Detection-using-CNN/assets/93116210/60561bd0-29e9-45c5-8ba9-c3b24c7727ed)
 
-  -  Classification Report:
-      - ![RF Classification Report](https://github.com/Pr0-C0der/Exoplanet-Detection-using-CNN/assets/93116210/3d41416f-2d14-4255-8d51-66f5162d0eec)
+    -  Classification Report:
+        - ![LGBM Classification Report](https://github.com/Pr0-C0der/Exoplanet-Detection-using-CNN/assets/93116210/6e4f4b7c-8f13-4f00-943b-117bc81077ba)
 
-- **K Nearest Neighbors**
-  - The fine-tuned model used:
-    - ![KNN](https://github.com/Pr0-C0der/Exoplanet-Detection-using-CNN/assets/93116210/0e7fced0-0572-40ae-9c31-631e6e2e7bcc)
+  - **Random Forest**
+    - The fine-tuned model used:
+      - ![RF](https://github.com/Pr0-C0der/Exoplanet-Detection-using-CNN/assets/93116210/9f71df7d-14c9-40bb-87af-d3de734116d1)
 
-  -  Classification Report:
-      - ![KNN Classification Report](https://github.com/Pr0-C0der/Exoplanet-Detection-using-CNN/assets/93116210/db91576a-db9b-4549-b45b-71233fe1ab3a)
+    -  Classification Report:
+        - ![RF Classification Report](https://github.com/Pr0-C0der/Exoplanet-Detection-using-CNN/assets/93116210/3d41416f-2d14-4255-8d51-66f5162d0eec)
+
+  - **K Nearest Neighbors**
+    - The fine-tuned model used:
+      - ![KNN](https://github.com/Pr0-C0der/Exoplanet-Detection-using-CNN/assets/93116210/0e7fced0-0572-40ae-9c31-631e6e2e7bcc)
+
+    -  Classification Report:
+        - ![KNN Classification Report](https://github.com/Pr0-C0der/Exoplanet-Detection-using-CNN/assets/93116210/db91576a-db9b-4549-b45b-71233fe1ab3a)
   
 
 3. Best Performing Machine Learning Model - Logistic Regression:

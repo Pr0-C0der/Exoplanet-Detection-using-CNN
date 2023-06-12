@@ -21,6 +21,7 @@ The project aims to leverage machine learning and deep learning techniques to an
 - [Data Preprocessing](#data-preprocessing)
 - [Modelling](#modelling)
 - [Results](#results)
+- [Conclusion](#conclusion)
 
 
 # What is Exoplanet?
@@ -175,7 +176,10 @@ The results of the project are as follows:
 
 1. The Proposed CNN Model:
 
-   - The proposed CNN model showed an exceptional performance, with 100% precision and recall on the test set after multiple iterations and fine-tuning. Although such high accuracy is uncommon in real-world scenarios, it demonstrates the model's ability to effectively learn and capture the underlying patterns in exoplanet detection. The best-performing model has been saved and can be accessed in the GitHub repository.
+   - The proposed CNN model showed an exceptional performance, with **99.82% precision, 100% recall and 99.91% accuracy** on the test set after multiple iterations and fine-tuning. Although such high accuracy is uncommon in real-world scenarios, it demonstrates the model's ability to effectively learn and capture the underlying patterns in exoplanet detection. The best-performing model has been saved and can be accessed in the GitHub repository.
+
+![Proposed Model Results](https://github.com/Pr0-C0der/Exoplanet-Detection-using-CNN/assets/93116210/aa91f25d-3951-48f0-8456-a85883e73172)
+
    
 2. Machine Learning Models:
 
@@ -213,3 +217,9 @@ The results of the project are as follows:
 
   -  Classification Report:
       - ![LR Classification Report](https://github.com/Pr0-C0der/Exoplanet-Detection-using-CNN/assets/93116210/83ec6292-e05d-432f-a781-472d95ca12eb)
+
+
+# Conclusion
+Overall, this project has shed light on the potential of machine learning in exoplanet detection and prediction. It has demonstrated the effectiveness of CNN models and the significance of selecting appropriate algorithms for specific tasks. While there is room for improvement in the performance of the machine learning models, this project serves as a valuable foundation for further research in the field of exoplanet exploration and offers insights into the application of machine learning techniques in the domain.
+
+The project outcomes can guide future research efforts and inspire the development of more accurate and efficient models for exoplanet detection, ultimately advancing our knowledge of the universe and the existence of habitable planets beyond our solar system.

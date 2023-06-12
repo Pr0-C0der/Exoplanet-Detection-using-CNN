@@ -12,7 +12,7 @@ The project aims to leverage machine learning and deep learning techniques to an
 
 ## Table of Contents
 
-- [What is Exoplanet](#what-is-exoplanet)
+- [What is Exoplanet?](#what-is-exoplanet)
 - [Methods for Detecting Exoplanets](#methods-for-detecting-exoplanets)
 - [Transit Method used for Exoplanet Detection](#transit-method-used-for-exoplanet-detection)
 - [Literature Review](#literature-review)
